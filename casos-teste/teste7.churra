@@ -1,0 +1,5 @@
+amigo "Ana" contribui 80 vegetariano
+amigo "Bia" contribui 80
+item carne "costela" preco_kg 40 quantidade_kg 2
+item bebida preco_L 20 quantidade_L 2
+rateio igual

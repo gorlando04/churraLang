@@ -1,0 +1,7 @@
+amigo "A" contribui 100
+amigo "B" contribui 150
+amigo "C" contribui 50 vegetariano
+item carne "frango" preco_kg 20 quantidade_kg 2
+item comida preco_unit 15 quantidade 4
+item bebida preco_L 5 quantidade_L 4
+rateio igual

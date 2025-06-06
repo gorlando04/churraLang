@@ -1,0 +1,347 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> program
+Rule 1     program -> comandos
+Rule 2     comandos -> comandos comando
+Rule 3     comandos -> comando
+Rule 4     comando -> AMIGO STRING CONTRIBUI NUMERO
+Rule 5     comando -> AMIGO STRING CONTRIBUI NUMERO VEGETARIANO
+Rule 6     comando -> ITEM CARNE STRING PRECO_KG NUMERO QUANTIDADE_KG NUMERO
+Rule 7     comando -> ITEM BEBIDA PRECO_L NUMERO QUANTIDADE_L NUMERO
+Rule 8     comando -> ITEM COMIDA PRECO_UNIT NUMERO QUANTIDADE NUMERO
+Rule 9     comando -> ITEM ENTRETENIMENTO PRECO_UNIT NUMERO QUANTIDADE NUMERO
+Rule 10    comando -> RATEIO IGUAL
+
+Terminals, with rules where they appear
+
+AMIGO                : 4 5
+BEBIDA               : 7
+CARNE                : 6
+COMIDA               : 8
+CONTRIBUI            : 4 5
+ENTRETENIMENTO       : 9
+IGUAL                : 10
+ITEM                 : 6 7 8 9
+NUMERO               : 4 5 6 6 7 7 8 8 9 9
+PRECO_KG             : 6
+PRECO_L              : 7
+PRECO_UNIT           : 8 9
+QUANTIDADE           : 8 9
+QUANTIDADE_KG        : 6
+QUANTIDADE_L         : 7
+RATEIO               : 10
+STRING               : 4 5 6
+VEGETARIANO          : 5
+error                : 
+
+Nonterminals, with rules where they appear
+
+comando              : 2 3
+comandos             : 1 2
+program              : 0
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . program
+    (1) program -> . comandos
+    (2) comandos -> . comandos comando
+    (3) comandos -> . comando
+    (4) comando -> . AMIGO STRING CONTRIBUI NUMERO
+    (5) comando -> . AMIGO STRING CONTRIBUI NUMERO VEGETARIANO
+    (6) comando -> . ITEM CARNE STRING PRECO_KG NUMERO QUANTIDADE_KG NUMERO
+    (7) comando -> . ITEM BEBIDA PRECO_L NUMERO QUANTIDADE_L NUMERO
+    (8) comando -> . ITEM COMIDA PRECO_UNIT NUMERO QUANTIDADE NUMERO
+    (9) comando -> . ITEM ENTRETENIMENTO PRECO_UNIT NUMERO QUANTIDADE NUMERO
+    (10) comando -> . RATEIO IGUAL
+
+    AMIGO           shift and go to state 4
+    ITEM            shift and go to state 5
+    RATEIO          shift and go to state 6
+
+    program                        shift and go to state 1
+    comandos                       shift and go to state 2
+    comando                        shift and go to state 3
+
+state 1
+
+    (0) S' -> program .
+
+
+
+state 2
+
+    (1) program -> comandos .
+    (2) comandos -> comandos . comando
+    (4) comando -> . AMIGO STRING CONTRIBUI NUMERO
+    (5) comando -> . AMIGO STRING CONTRIBUI NUMERO VEGETARIANO
+    (6) comando -> . ITEM CARNE STRING PRECO_KG NUMERO QUANTIDADE_KG NUMERO
+    (7) comando -> . ITEM BEBIDA PRECO_L NUMERO QUANTIDADE_L NUMERO
+    (8) comando -> . ITEM COMIDA PRECO_UNIT NUMERO QUANTIDADE NUMERO
+    (9) comando -> . ITEM ENTRETENIMENTO PRECO_UNIT NUMERO QUANTIDADE NUMERO
+    (10) comando -> . RATEIO IGUAL
+
+    $end            reduce using rule 1 (program -> comandos .)
+    AMIGO           shift and go to state 4
+    ITEM            shift and go to state 5
+    RATEIO          shift and go to state 6
+
+    comando                        shift and go to state 7
+
+state 3
+
+    (3) comandos -> comando .
+
+    AMIGO           reduce using rule 3 (comandos -> comando .)
+    ITEM            reduce using rule 3 (comandos -> comando .)
+    RATEIO          reduce using rule 3 (comandos -> comando .)
+    $end            reduce using rule 3 (comandos -> comando .)
+
+
+state 4
+
+    (4) comando -> AMIGO . STRING CONTRIBUI NUMERO
+    (5) comando -> AMIGO . STRING CONTRIBUI NUMERO VEGETARIANO
+
+    STRING          shift and go to state 8
+
+
+state 5
+
+    (6) comando -> ITEM . CARNE STRING PRECO_KG NUMERO QUANTIDADE_KG NUMERO
+    (7) comando -> ITEM . BEBIDA PRECO_L NUMERO QUANTIDADE_L NUMERO
+    (8) comando -> ITEM . COMIDA PRECO_UNIT NUMERO QUANTIDADE NUMERO
+    (9) comando -> ITEM . ENTRETENIMENTO PRECO_UNIT NUMERO QUANTIDADE NUMERO
+
+    CARNE           shift and go to state 9
+    BEBIDA          shift and go to state 10
+    COMIDA          shift and go to state 11
+    ENTRETENIMENTO  shift and go to state 12
+
+
+state 6
+
+    (10) comando -> RATEIO . IGUAL
+
+    IGUAL           shift and go to state 13
+
+
+state 7
+
+    (2) comandos -> comandos comando .
+
+    AMIGO           reduce using rule 2 (comandos -> comandos comando .)
+    ITEM            reduce using rule 2 (comandos -> comandos comando .)
+    RATEIO          reduce using rule 2 (comandos -> comandos comando .)
+    $end            reduce using rule 2 (comandos -> comandos comando .)
+
+
+state 8
+
+    (4) comando -> AMIGO STRING . CONTRIBUI NUMERO
+    (5) comando -> AMIGO STRING . CONTRIBUI NUMERO VEGETARIANO
+
+    CONTRIBUI       shift and go to state 14
+
+
+state 9
+
+    (6) comando -> ITEM CARNE . STRING PRECO_KG NUMERO QUANTIDADE_KG NUMERO
+
+    STRING          shift and go to state 15
+
+
+state 10
+
+    (7) comando -> ITEM BEBIDA . PRECO_L NUMERO QUANTIDADE_L NUMERO
+
+    PRECO_L         shift and go to state 16
+
+
+state 11
+
+    (8) comando -> ITEM COMIDA . PRECO_UNIT NUMERO QUANTIDADE NUMERO
+
+    PRECO_UNIT      shift and go to state 17
+
+
+state 12
+
+    (9) comando -> ITEM ENTRETENIMENTO . PRECO_UNIT NUMERO QUANTIDADE NUMERO
+
+    PRECO_UNIT      shift and go to state 18
+
+
+state 13
+
+    (10) comando -> RATEIO IGUAL .
+
+    AMIGO           reduce using rule 10 (comando -> RATEIO IGUAL .)
+    ITEM            reduce using rule 10 (comando -> RATEIO IGUAL .)
+    RATEIO          reduce using rule 10 (comando -> RATEIO IGUAL .)
+    $end            reduce using rule 10 (comando -> RATEIO IGUAL .)
+
+
+state 14
+
+    (4) comando -> AMIGO STRING CONTRIBUI . NUMERO
+    (5) comando -> AMIGO STRING CONTRIBUI . NUMERO VEGETARIANO
+
+    NUMERO          shift and go to state 19
+
+
+state 15
+
+    (6) comando -> ITEM CARNE STRING . PRECO_KG NUMERO QUANTIDADE_KG NUMERO
+
+    PRECO_KG        shift and go to state 20
+
+
+state 16
+
+    (7) comando -> ITEM BEBIDA PRECO_L . NUMERO QUANTIDADE_L NUMERO
+
+    NUMERO          shift and go to state 21
+
+
+state 17
+
+    (8) comando -> ITEM COMIDA PRECO_UNIT . NUMERO QUANTIDADE NUMERO
+
+    NUMERO          shift and go to state 22
+
+
+state 18
+
+    (9) comando -> ITEM ENTRETENIMENTO PRECO_UNIT . NUMERO QUANTIDADE NUMERO
+
+    NUMERO          shift and go to state 23
+
+
+state 19
+
+    (4) comando -> AMIGO STRING CONTRIBUI NUMERO .
+    (5) comando -> AMIGO STRING CONTRIBUI NUMERO . VEGETARIANO
+
+    AMIGO           reduce using rule 4 (comando -> AMIGO STRING CONTRIBUI NUMERO .)
+    ITEM            reduce using rule 4 (comando -> AMIGO STRING CONTRIBUI NUMERO .)
+    RATEIO          reduce using rule 4 (comando -> AMIGO STRING CONTRIBUI NUMERO .)
+    $end            reduce using rule 4 (comando -> AMIGO STRING CONTRIBUI NUMERO .)
+    VEGETARIANO     shift and go to state 24
+
+
+state 20
+
+    (6) comando -> ITEM CARNE STRING PRECO_KG . NUMERO QUANTIDADE_KG NUMERO
+
+    NUMERO          shift and go to state 25
+
+
+state 21
+
+    (7) comando -> ITEM BEBIDA PRECO_L NUMERO . QUANTIDADE_L NUMERO
+
+    QUANTIDADE_L    shift and go to state 26
+
+
+state 22
+
+    (8) comando -> ITEM COMIDA PRECO_UNIT NUMERO . QUANTIDADE NUMERO
+
+    QUANTIDADE      shift and go to state 27
+
+
+state 23
+
+    (9) comando -> ITEM ENTRETENIMENTO PRECO_UNIT NUMERO . QUANTIDADE NUMERO
+
+    QUANTIDADE      shift and go to state 28
+
+
+state 24
+
+    (5) comando -> AMIGO STRING CONTRIBUI NUMERO VEGETARIANO .
+
+    AMIGO           reduce using rule 5 (comando -> AMIGO STRING CONTRIBUI NUMERO VEGETARIANO .)
+    ITEM            reduce using rule 5 (comando -> AMIGO STRING CONTRIBUI NUMERO VEGETARIANO .)
+    RATEIO          reduce using rule 5 (comando -> AMIGO STRING CONTRIBUI NUMERO VEGETARIANO .)
+    $end            reduce using rule 5 (comando -> AMIGO STRING CONTRIBUI NUMERO VEGETARIANO .)
+
+
+state 25
+
+    (6) comando -> ITEM CARNE STRING PRECO_KG NUMERO . QUANTIDADE_KG NUMERO
+
+    QUANTIDADE_KG   shift and go to state 29
+
+
+state 26
+
+    (7) comando -> ITEM BEBIDA PRECO_L NUMERO QUANTIDADE_L . NUMERO
+
+    NUMERO          shift and go to state 30
+
+
+state 27
+
+    (8) comando -> ITEM COMIDA PRECO_UNIT NUMERO QUANTIDADE . NUMERO
+
+    NUMERO          shift and go to state 31
+
+
+state 28
+
+    (9) comando -> ITEM ENTRETENIMENTO PRECO_UNIT NUMERO QUANTIDADE . NUMERO
+
+    NUMERO          shift and go to state 32
+
+
+state 29
+
+    (6) comando -> ITEM CARNE STRING PRECO_KG NUMERO QUANTIDADE_KG . NUMERO
+
+    NUMERO          shift and go to state 33
+
+
+state 30
+
+    (7) comando -> ITEM BEBIDA PRECO_L NUMERO QUANTIDADE_L NUMERO .
+
+    AMIGO           reduce using rule 7 (comando -> ITEM BEBIDA PRECO_L NUMERO QUANTIDADE_L NUMERO .)
+    ITEM            reduce using rule 7 (comando -> ITEM BEBIDA PRECO_L NUMERO QUANTIDADE_L NUMERO .)
+    RATEIO          reduce using rule 7 (comando -> ITEM BEBIDA PRECO_L NUMERO QUANTIDADE_L NUMERO .)
+    $end            reduce using rule 7 (comando -> ITEM BEBIDA PRECO_L NUMERO QUANTIDADE_L NUMERO .)
+
+
+state 31
+
+    (8) comando -> ITEM COMIDA PRECO_UNIT NUMERO QUANTIDADE NUMERO .
+
+    AMIGO           reduce using rule 8 (comando -> ITEM COMIDA PRECO_UNIT NUMERO QUANTIDADE NUMERO .)
+    ITEM            reduce using rule 8 (comando -> ITEM COMIDA PRECO_UNIT NUMERO QUANTIDADE NUMERO .)
+    RATEIO          reduce using rule 8 (comando -> ITEM COMIDA PRECO_UNIT NUMERO QUANTIDADE NUMERO .)
+    $end            reduce using rule 8 (comando -> ITEM COMIDA PRECO_UNIT NUMERO QUANTIDADE NUMERO .)
+
+
+state 32
+
+    (9) comando -> ITEM ENTRETENIMENTO PRECO_UNIT NUMERO QUANTIDADE NUMERO .
+
+    AMIGO           reduce using rule 9 (comando -> ITEM ENTRETENIMENTO PRECO_UNIT NUMERO QUANTIDADE NUMERO .)
+    ITEM            reduce using rule 9 (comando -> ITEM ENTRETENIMENTO PRECO_UNIT NUMERO QUANTIDADE NUMERO .)
+    RATEIO          reduce using rule 9 (comando -> ITEM ENTRETENIMENTO PRECO_UNIT NUMERO QUANTIDADE NUMERO .)
+    $end            reduce using rule 9 (comando -> ITEM ENTRETENIMENTO PRECO_UNIT NUMERO QUANTIDADE NUMERO .)
+
+
+state 33
+
+    (6) comando -> ITEM CARNE STRING PRECO_KG NUMERO QUANTIDADE_KG NUMERO .
+
+    AMIGO           reduce using rule 6 (comando -> ITEM CARNE STRING PRECO_KG NUMERO QUANTIDADE_KG NUMERO .)
+    ITEM            reduce using rule 6 (comando -> ITEM CARNE STRING PRECO_KG NUMERO QUANTIDADE_KG NUMERO .)
+    RATEIO          reduce using rule 6 (comando -> ITEM CARNE STRING PRECO_KG NUMERO QUANTIDADE_KG NUMERO .)
+    $end            reduce using rule 6 (comando -> ITEM CARNE STRING PRECO_KG NUMERO QUANTIDADE_KG NUMERO .)
+

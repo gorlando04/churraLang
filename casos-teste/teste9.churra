@@ -1,0 +1,5 @@
+amigo "L" contribui 90
+amigo "M" contribui 110
+item bebida preco_L 10 quantidade_L 4
+item comida preco_unit 10 quantidade 2
+rateio igual

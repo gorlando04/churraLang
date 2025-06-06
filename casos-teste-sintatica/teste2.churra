@@ -1,0 +1,9 @@
+amigo "Felipe"  contribui 100
+amigo "João" contribui 100
+amigo "Mariana" contribui 100
+
+item carne preco_kg 60 quantidade_kg 3
+item bebida preco_L 10 quantidade_L 6
+item comida preco_unit 25 quantidade 2
+
+rateio igual

@@ -1,0 +1,10 @@
+amigo "João" contribui 100
+amigo "Laura" contribui 80 vegetariano
+amigo "Carlos contribui 90
+
+item carne "costela" preco_kg 40 quantidade_kg 2
+item bebida preco_L 10 quantidade_L 3
+item comida preco_unit 30 quantidade 1
+item entretenimento preco_unit 40 quantidade 1
+
+rateio igual
