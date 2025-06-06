@@ -1,0 +1,5 @@
+amigo "A" contribui 120
+amigo "B" contribui 80 vegetariano
+item carne "picanha" preco_kg 40 quantidade_kg 2
+item comida preco_unit 10 quantidade 3
+rateio igual

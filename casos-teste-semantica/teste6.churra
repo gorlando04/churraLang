@@ -1,0 +1,11 @@
+amigo "Felipe" contribui 100 vegetariano
+amigo "João" contribui 100 vegetariano
+amigo "Mariana" contribui 100 
+
+item carne "picanha" preco_kg 10 quantidade_kg 1
+item carne "fraldinha" preco_kg 20 quantidade_kg 2
+item carne "picanha" preco_kg 30 quantidade_kg 3
+item bebida preco_L 10 quantidade_L 6
+item comida preco_unit 25 quantidade 2
+
+rateio igual

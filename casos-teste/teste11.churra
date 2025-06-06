@@ -1,0 +1,17 @@
+amigo "Felipe" contribui 30
+amigo "Gabriel" contribui 30
+amigo "Caio" contribui 30
+amigo "Heitor" contribui 30 vegetariano
+amigo "Jorge" contribui 30
+amigo "GIullio" contribui 30 vegetariano
+amigo "Lucca" contribui 30
+amigo "Ana" contribui 30
+amigo "Roberta" contribui 30 vegetariano
+amigo "Abbiati" contribui 30
+
+item comida preco_unit 20 quantidade 5
+item carne "alcatra" preco_kg 50 quantidade_kg 2
+item entretenimento preco_unit 50 quantidade 1
+item bebida preco_L 25 quantidade_L 2
+
+rateio igual

@@ -1,0 +1,7 @@
+amigo "A" contribui 200
+amigo "B" contribui 200
+amigo "C" contribui 200
+item carne "picanha" preco_kg 60 quantidade_kg 2
+item carne "fraldinha" preco_kg 50 quantidade_kg 2
+item comida preco_unit 20 quantidade 2
+rateio igual
