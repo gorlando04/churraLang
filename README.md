@@ -5,6 +5,7 @@
 ## Desenvolvido por: Gabriel Orlando. RA: 790728 
 
 Vídeo curto demonstrando as funcionalidades da linguagem: [Link do video](https://youtu.be/fBAdz9tfYzg)
+Apresentação: [Link da apresentação](https://github.com/gorlando04/churraLang/blob/main/ChurraLangpptx.pdf)
 
 ## Objetivo do projeto
 
