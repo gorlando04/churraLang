@@ -25,3 +25,7 @@ try:
     print("✅ Arquivo 'saida_churrasco.html' gerado com sucesso.")
 except Exception as e:
     print("❌ Erro:", e)
+
+
+        t1 = loads(str_new)
+        t2 = loads(str_old)
