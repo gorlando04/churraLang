@@ -4,6 +4,8 @@
 
 ## Desenvolvido por: Gabriel Orlando. RA: 790728 
 
+Vídeo curto demonstrando as funcionalidades da linguagem: [Link do video](https://youtu.be/fBAdz9tfYzg)
+
 ## Objetivo do projeto
 
 - Criar uma linguagem específica com análise léxica, sintática e semântica
