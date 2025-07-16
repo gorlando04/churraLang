@@ -297,6 +297,7 @@ Contribuições são bem-vindas! Aqui estão algumas formas de colaborar com o p
 	•	Modularização mais fina do código
 	•	Separação dos dados e lógica de apresentação
 	•	Validações adicionais no parser
+	•	Adicionar código CSS Para tornar o relatório mais lúdico
 
 🛠 Como contribuir
 
